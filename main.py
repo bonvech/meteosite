@@ -4,13 +4,18 @@ app = Flask(__name__)
 
 
 @app.route('/')
-def render_index() -> str:
+def render_main() -> str:
     return render_template('index.html')
 
 
 @app.route('/registration.html')
 def render_registration() -> str:
     return render_template('registration.html')
+
+
+@app.route('/index.html')
+def render_index() -> str:
+    return render_template('index.html')
 
 
 if __name__ == '__main__':

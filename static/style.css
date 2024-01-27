@@ -8,11 +8,10 @@ h1 {
     text-align: center;
 }
 
-#myButton {
+.regbtn {
     position: fixed;
-    top: 10px;
-    right: 10px;
-    background-color: #4CAF50;
+    left: 10px;
+    background-color: #0084ff;
     color: white;
     padding: 16px 20px;
     margin: 8px 0;
@@ -21,6 +20,11 @@ h1 {
     width: 10%;
     opacity: 0.9;
 }
+
+.regbtn:hover {
+    opacity:1;
+}
+
 
 hr {
     border: 1px solid #f1f1f1;

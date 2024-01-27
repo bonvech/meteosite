@@ -22,35 +22,53 @@ input[type=text], input[type=password] {
 }
 
 input[type=text]:focus, input[type=password]:focus {
-  background-color: #ddd;
-  outline: none;
+    background-color: #ddd;
+    outline: none;
 }
 
 hr {
-  border: 1px solid #f1f1f1;
-  margin-bottom: 25px;
+    border: 1px solid #f1f1f1;
+    margin-bottom: 25px;
 }
 
 .registerbtn {
-  background-color: #4CAF50;
-  color: white;
-  padding: 16px 20px;
-  margin: 8px 0;
-  border: none;
-  cursor: pointer;
-  width: 100%;
-  opacity: 0.9;
+    background-color: #0084ff;
+    color: white;
+    padding: 16px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.9;
+}
+
+.mainbtn {
+    background-color: #0084ff;
+    color: white;
+    padding: 16px 20px;
+    position: fixed;
+    left: 10px;
+    border: none;
+    cursor: pointer;
+    opacity: 0.9;
+    margin: 8px 0;
+    width: 10%;
 }
 
 .registerbtn:hover {
-  opacity:1;
+    opacity:1;
 }
 
+.mainbtn:hover {
+    opacity:1;
+}
+
+
 a {
-  color: dodgerblue;
+    color: dodgerblue;
 }
 
 .signin {
-  background-color: #f1f1f1;
-  width: 100%;
+    background-color: #f1f1f1;
+    width: 100%;
 }
