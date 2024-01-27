@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container my-5">
+        <h1 class="text-center mb-4">MSU aerosol station data, last 48 hours data:</h1>
+        <div class="col">
+            <h2>Aethalometer AE-33 S09-01249</h2>
+            <hr>
+            <img src="gragh/aethalometer">
+            </hr>
+            <h2>TCA</h2>
+            <hr>
+            <img src="gragh/tca">
+            </hr>
+            <h2>Web MSU</h2>
+            <hr>
+            <img src="gragh/webmsu">
+            </hr>
+        </div>
+    </div>
+    <button id="myButton" onclick="window.location.href='registration.html'">Войти</button>
+</body>
+</html>
