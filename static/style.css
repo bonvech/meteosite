@@ -1,0 +1,20 @@
+body {
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+}
+h1 {
+    text-align: center;
+}
+
+#myButton {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+}
+
+hr {
+    border: 1px solid #f1f1f1;
+    margin-bottom: 25px;
+  }
