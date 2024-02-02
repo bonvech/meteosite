@@ -7,17 +7,50 @@
     <title>Document</title>
 </head>
 <body>
-    <div class="container">
-        <h1 class="text-center mb-4">MSU aerosol station data, last 48 hours data:</h1>
-        <div class="col">
-            <h2>Aethalometer AE-33 S09-01249</h2>
-            <hr><img src="gragh/aethalometer"></hr>
-            <h2>TCA</h2>
-            <hr><img src="gragh/tca"></hr>
-            <h2>Web MSU</h2>
-            <hr><img src="gragh/webmsu"></hr>
-        </div>
+<div class="container">
+    <h1 class="text-center mb-4">MSU aerosol station data, last 48 hours data:</h1>
+    <div class="col">
+        <h2>Aethalometer AE-33 S09-01249</h2>
+        <div id="plotly-chart"></div>
+        <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+        <script>
+            var file = event.target.files[0];
+            var reader = new FileReader();
+
+            reader.onload = function(e) {
+            var data = e.target.result;
+            var parsedData = parseData(data); // Функция для парсинга данных из файла
+            var data = [{
+              x: parsedData.x,
+              y: parsedData.y,
+              type: 'scatter'
+            }];
+
+            var layout = {
+              title: 'Пример графика Plotly',
+              xaxis: {
+                title: 'X-ось'
+              },
+              yaxis: {
+                title: 'Y-ось'
+              }
+            };
+
+            Plotly.newPlot('plotly-chart', data, layout);
+            if (file.name.endsWith('.csv')) {
+            reader.readAsText(file);
+            }
+        </script>
+        <hr>
+        <img src="gragh/aethalometer/pic_lovely.png"></hr>
+        <h2>TCA</h2>
+        <hr>
+        <img src="gragh/tca"></hr>
+        <h2>Web MSU</h2>
+        <hr>
+        <img src="gragh/webmsu"></hr>
     </div>
-    <button type="reg" class="regbtn" onclick="window.location.href='registration.html'">Войти</button>
+</div>
+<button type="reg" class="regbtn" onclick="window.location.href='registration.html'">Войти</button>
 </body>
 </html>
