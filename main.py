@@ -1,8 +1,10 @@
 import re
+import os
 
 from flask import Flask, render_template, request
-from graphs import load_graph
+from graphs import load_graph, preprocessing_file
 import sqlite3
+
 app = Flask(__name__)
 
 
@@ -78,4 +80,8 @@ def render_graph() -> str:
 
 
 if __name__ == '__main__':
+    for path in os.listdir('data'):
+        for file in os.listdir(f'data\\{path}'):
+            if not file.endswith('.xlsx'):
+                preprocessing_file(f'data\\{path}\\{file}')
     app.run()
