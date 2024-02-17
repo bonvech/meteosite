@@ -19,6 +19,7 @@ h1 {
     cursor: pointer;
     width: 10%;
     opacity: 0.9;
+    display: block;
 }
 
 .regbtn:hover {

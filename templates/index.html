@@ -4,20 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
     <title>Document</title>
 </head>
 <body>
-    <div class="container">
-        <h1 class="text-center mb-4">MSU aerosol station data, last 48 hours data:</h1>
-        <div class="col">
-            <h2>Aethalometer AE-33 S09-01249</h2>
-            <hr><img src="gragh/aethalometer"></hr>
-            <h2>TCA</h2>
-            <hr><img src="gragh/tca"></hr>
-            <h2>Web MSU</h2>
-            <hr><img src="gragh/webmsu"></hr>
-        </div>
+<div class="container">
+    <h1 class="text-center mb-4">MSU aerosol station data, last 48 hours data:</h1>
+    <div class="col">
+        <h2>Aethalometer AE-33 S09-01249</h2>
+        <hr>
+        <img src="gragh/tca">
+        <object type="text/html" data="graph.html" width="800" height="500"></object>
+        <h2>TCA</h2>
+        <hr>
+        <img src="gragh/tca">
+        <h2>Web MSU</h2>
+        <hr>
+        <img src="gragh/webmsu">
     </div>
-    <button type="reg" class="regbtn" onclick="window.location.href='registration.html'">Войти</button>
+</div>
+<button type="button" class="regbtn" onclick="window.location.href='registration.html'">Войти</button>
 </body>
 </html>

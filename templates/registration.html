@@ -7,26 +7,29 @@
     <title>Document</title>
 </head>
 <body>
-    <form>
+    <form method="POST">
         <div class="container">
             <div class="col">
                 <h1>Регистрация</h1>
                 <p>Заполните форму ниже, чтобы создать аккаунт</p>
-                <label for="email"><b>Эл. почта</b></label>
-                <input type="text" placeholder="Enter Email" name="email" required>
+                <label><b>Имя Фамилия</b></label>
+                <input type="text" placeholder="Введите имя" name="name" required>
 
-                <label for="psw"><b>Пароль</b></label>
-                <input type="password" placeholder="Enter Password" name="psw" required>
+                <label><b>Эл. почта</b></label>
+                <input type="text" placeholder="Введите почту" name="email" required>
 
-                <label for="psw-repeat"><b>Повторите пароль</b></label>
-                <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
-                <button type="submit" class="registerbtn">Создать</button>
+                <label><b>Пароль</b></label>
+                <input type="password" placeholder="Введите пароль" name="psw" required>
+
+                <label><b>Повторите пароль</b></label>
+                <input type="password" placeholder="Повторите пароль" name="psw-repeat" required>
+                <button type="submit" class="registerbtn" onclick="window.location.href='index.html'">Создать</button>
             </div>
             <div class="container signin">
-                <p>У Вас уже есть аккаунт? <a href="#">Войти</a>.</p>
+                <p>У Вас уже есть аккаунт? <a onclick="window.location.href='enter.html'">Войти</a>.</p>
             </div>
         </div>
     </form>
-    <button type="back" class="mainbtn" onclick="window.location.href='index.html'">Главная</button>
+    <button class="mainbtn" onclick="window.location.href='index.html'">Главная</button>
 </body>
 </html>
