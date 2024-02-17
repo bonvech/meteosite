@@ -74,14 +74,24 @@ def render_index() -> str:
     return render_template('index.html')
 
 
-@app.route('/graph.html')
-def render_graph() -> str:
-    return render_template('graph.html')
+@app.route('/graph_AE33-S09-01249.html')
+def render_graph_ae() -> str:
+    return render_template('graph_AE33-S09-01249.html')
+
+
+@app.route('/graph_TCA08.html')
+def render_graph_tca() -> str:
+    return render_template('graph_TCA08.html')
+
+
+@app.route('/graph_Web_MEM.html')
+def render_graph_web_mem() -> str:
+    return render_template('graph_Web_MEM.html')
 
 
 if __name__ == '__main__':
-    for path in os.listdir('data'):
-        for file in os.listdir(f'data\\{path}'):
-            if not file.endswith('.xlsx'):
-                preprocessing_file(f'data\\{path}\\{file}')
+    # for path in os.listdir('proc_data'):
+        # for file in os.listdir(f'proc_data\\{path}'):
+            # if not file.endswith('.xlsx'):
+                # preprocessing_file(f'proc_data\\{path}\\{file}')
     app.run()
