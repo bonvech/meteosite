@@ -2,7 +2,7 @@ import re
 import os
 
 from flask import Flask, render_template, request
-from graphs import load_graph, preprocessing_file
+from graphs import load_graph, make_graph, preprocessing_all_files
 import sqlite3
 
 app = Flask(__name__)
@@ -90,8 +90,8 @@ def render_graph_web_mem() -> str:
 
 
 if __name__ == '__main__':
-    # for path in os.listdir('proc_data'):
-        # for file in os.listdir(f'proc_data\\{path}'):
-            # if not file.endswith('.xlsx'):
-                # preprocessing_file(f'proc_data\\{path}\\{file}')
+    # preprocessing_all_files()
+    make_graph('AE33-S09-01249')
+    make_graph('TCA08')
+    make_graph('Web_MEM')
     app.run()
